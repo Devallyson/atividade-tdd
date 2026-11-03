@@ -63,6 +63,10 @@ def test_req1_lista_mista(pedido_pequeno, pedido_grande):
     assert contar_frete_gratis([pedido_pequeno, pedido_grande]) == 1
 
 
+def test_req1_lista_vazia_retorna_zero():
+    assert contar_frete_gratis([]) == 0
+
+
 # Requisito 2 — situacao(unidades_indisponiveis) -> str
 # Escreva os testes ANTES de implementar o método
 
