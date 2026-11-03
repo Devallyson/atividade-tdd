@@ -40,6 +40,8 @@ class Pedido:
         return "Confirmado"
 
     def sugerir_frete_gratis(self, sms_service) -> None:
+        if self.tem_frete_gratis():
+            return
         sms_service.enviar(self.cliente, round(VALOR_FRETE_GRATIS - self.subtotal(), 2))
 
 
