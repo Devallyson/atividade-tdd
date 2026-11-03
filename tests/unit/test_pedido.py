@@ -32,6 +32,11 @@ def test_bug3_item_mais_barato(pedido_pequeno):
     assert pedido_pequeno.item_mais_barato().nome == "Pão de queijo"
 
 
+def test_bug4_total_com_desconto_subtrai_percentual():
+    pedido = Pedido("Carla", [Item("Combo", 100.0, 1)])
+    assert pedido.total_com_desconto(10) == 90.0
+
+
 
 
 # =============================================================
