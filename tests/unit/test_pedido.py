@@ -72,6 +72,10 @@ def test_req1_lista_vazia_retorna_zero():
 
 
 
+def test_req2_tudo_disponivel_abaixo_de_50_confirmado(pedido_pequeno):
+    assert pedido_pequeno.situacao(0) == "Confirmado"
+
+
 # Requisito 3 — sugerir_frete_gratis(sms_service) -> None
 # Use MagicMock para simular o serviço de SMS
 # Escreva os testes ANTES de implementar o método
