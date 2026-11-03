@@ -28,6 +28,10 @@ def test_bug2_frete_gratis_com_exatamente_50():
     assert pedido.tem_frete_gratis() is True
 
 
+def test_bug3_item_mais_barato(pedido_pequeno):
+    assert pedido_pequeno.item_mais_barato().nome == "Pão de queijo"
+
+
 
 
 # =============================================================
